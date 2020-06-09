@@ -1,7 +1,7 @@
 import tkinter as tk
 
 def createOptionsWindow():
-    #creates the main window with size 300x300 and makes it non-resizable
+    #creates the options window with size 200x100 and makes it non-resizable
     optionsWindow = tk.Tk()
     optionsWindow.geometry("200x100")
     optionsWindow.resizable(False, False)
