@@ -7,3 +7,5 @@
 .idea/workspace.xml
 client/GUI/__pycache__/MainMenu.cpython-38.pyc
 client/__pycache__/MainMenu.cpython-38.pyc
+client/GUI/__pycache__/GUIhandler.cpython-38.pyc
+*.pyc
