@@ -9,7 +9,14 @@ Richard Janoher
 these objectives don't necessarily have to be implemented in the order they are presented here.
   
 Networking (Virginia Sicuriello):
-  
+  - Create a server using:
+    + Socket function to create a socket object.
+    + Bind function to specify a port.
+    + Thread function to allow the completion of tasks that will be performed. 
+    + Accept method to wait until a client connects.
+  - Create a client using:
+    + Socket function that opens a connection to hostname on the port.
+    + Connecting the clients to the server to send information to and from the server.
   
 GUI (Alec Walter):
   - Creation of a main menu with buttons to connect to a game, change options (such as background colors), and exit the program.
