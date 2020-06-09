@@ -17,7 +17,10 @@ Networking (Virginia Sicuriello):
   - Create a client using:
     + Socket function that opens a connection to hostname on the port.
     + Connecting the clients to the server to send information to and from the server.
-  
+Networking progress: To start testing how networking works, currently, client.py and server.py are testing how the server-side 
+                     will handle multiple connections by asking for a username and sending messages that the clients, as well 
+                     as the server, can see. As the project progresses, the networking task will change to be linked with the GUI.
+                     
 GUI (Alec Walter):
   - Creation of a main menu with buttons to connect to a game, change options (such as background colors), and exit the program.
   - Creation of a pre-game screen with a "ready" button. When all connected players select the ready button, the game starts.
