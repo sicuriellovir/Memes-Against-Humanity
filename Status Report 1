@@ -1,18 +1,26 @@
-Memes-Against-Humanity
+Memes Against Humanity
 COP 4521 Project
 
 Alec Walter
+Virginia Sicuriello
 Dori Hsu
 Richard Janoher
-Virginia Sicuriello
 
-  The project will be split into 4 main components. The plan for development of these components is decribed below.
+  The project will be split into 4 main components. The plan for development of these components is decribed below. Note that
+these objectives don't necessarily have to be implemented in the order they are presented here.
   
 Networking (Virginia Sicuriello):
   
   
 GUI (Alec Walter):
-
+  - Creation of a main menu with buttons to connect to a game, change options (such as background colors), and exit the program.
+  - Creation of a pre-game screen with a "ready" button. When all connected players select the ready button, the game starts.
+  - Create a "view" for each non-judge player in a given round. Each non-judge player should be prompted to select from one of
+    their seven cards.
+  - Create a "view" for the judge of a given round. The judge should wait for each non-judge to select a card, then be prompted
+    to choose from those cards.
+  - Once a player reaches a certain number of points, a screen indicating their win should be shown along with an option to
+    return to the main menu or exit the program.
 
 Mechanics:
 
