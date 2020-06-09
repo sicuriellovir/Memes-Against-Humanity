@@ -1,6 +1,5 @@
-from .GUI import MainMenu as menu
-
+import MainMenu as menu
 def SetupClient():
-    menu.CreateMainMenu()
+    menu.createMainMenu()
 
 SetupClient()
