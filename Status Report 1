@@ -22,16 +22,37 @@ Networking progress: To start testing how networking works, currently, client.py
                      as the server, can see. As the project progresses, the networking task will change to be linked with the GUI.
                      
 GUI (Alec Walter):
-  - Creation of a main menu with buttons to connect to a game, change options (such as background colors), and exit the program.
-  - Creation of a pre-game screen with a "ready" button. When all connected players select the ready button, the game starts.
-  - Create a "view" for each non-judge player in a given round. Each non-judge player should be prompted to select from one of
-    their seven cards.
-  - Create a "view" for the judge of a given round. The judge should wait for each non-judge to select a card, then be prompted
-    to choose from those cards.
-  - Once a player reaches a certain number of points, a screen indicating their win should be shown along with an option to
+   Note that I am referring to a tkinter Frame when I use the word Frame
+  - Creation of a main menu Frame with buttons to connect to a game, change options (such as background colors), and exit the
+    program.
+  - Creation of a pre-game Frame with a "ready" button. When all connected players select the ready button, the game starts.
+    This screen should have a text box for the user to enter a username.
+  - Need to display objects of type MemeCard and PhraseCard on the Frame for players.
+  - Create a Frame for each non-judge player in a given round. Each non-judge player should be shown a meme card and prompted to
+    select from one of their seven phrase cards.
+  - Create a Frame for the judge of a given round. The judge should wait for each non-judge to select a card, then be shown a 
+    meme card and prompted to choose from those cards.
+  - Once a player reaches a certain number of points, a Frame indicating their win should be shown along with an option to
     return to the main menu or exit the program.
+    Progress: I have made a Frame for the main menu, options window, and pre-game ready menu along
+              with a "GUIhandler" to manage the Frames. The main menu Frame has buttons for connecting to a game, showing the
+              options window, and exiting the program. The options window is not fully implemented yet, so there is only a
+              button to close the options window. The pre-game ready Frame has a button for indicating a player is ready to start
+              the game and a button to return to the main menu. This Frame is not fully implemented yet, so for now clicking the
+              ready button just disables the two buttons on the frame. Once it is fully implemented, clicking the ready button
+              should send the entered username to the server along with an indication that the player is ready, perhaps in the
+              form of a boolean flag.
 
 Mechanics (Richard Janoher):
 
 
 Storage/retrieval of cards (Alec Walter):
+  - Create a folder for image (meme) files and a folder for text (phrase) files. This folder will initially contain test images
+    and phrases until development is near its end.
+  - Create a class Card with two classes MemeCard and PhraseCard that inherit from Card.
+  - Implement a function to load data from an external file and make it accessible from a MemeCard or PhraseCard. The meme card
+    for a given round and phrase cards for each player should be chosen by the server and sent to the clients. This can be done
+    using the pickle library.
+  Progress: There hasn't been any progress on this portion of the assignment yet as I have been focusing on the GUI development,
+            but once I get around to creating the tkinter Frames for an in-progress game I will implement the above features.
+  
