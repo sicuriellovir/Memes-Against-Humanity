@@ -34,14 +34,13 @@ GUI (Alec Walter):
     meme card and prompted to choose from those cards.
   - Once a player reaches a certain number of points, a Frame indicating their win should be shown along with an option to
     return to the main menu or exit the program.
-    Progress: I have made a Frame for the main menu, options window, and pre-game ready menu along
-              with a "GUIhandler" to manage the Frames. The main menu Frame has buttons for connecting to a game, showing the
-              options window, and exiting the program. The options window is not fully implemented yet, so there is only a
-              button to close the options window. The pre-game ready Frame has a button for indicating a player is ready to start
-              the game and a button to return to the main menu. This Frame is not fully implemented yet, so for now clicking the
-              ready button just disables the two buttons on the frame. Once it is fully implemented, clicking the ready button
-              should send the entered username to the server along with an indication that the player is ready, perhaps in the
-              form of a boolean flag.
+    Progress: I have made a Frame for the main menu, options window, and pre-game ready menu along with a "GUIhandler" to manage
+              the Frames. The main menu Frame has buttons for connecting to a game, showing the options window, and exiting the
+              program. The options window is not fully implemented yet, so there is only a button to close the options window.
+              The pre-game ready Frame has a button for indicating a player is ready to start the game and a button to return
+              to the main menu. This Frame is not fully implemented yet, so for now clicking the ready button just disables the
+              two buttons on the frame. Once it is fully implemented, clicking the ready button should send the entered username
+              to the server along with an indication that the player is ready, perhaps in the form of a boolean flag.
 
 Mechanics (Richard Janoher):
 
