@@ -43,7 +43,20 @@ GUI (Alec Walter):
               to the server along with an indication that the player is ready, perhaps in the form of a boolean flag.
 
 Mechanics (Richard Janoher):
-
+  - Create multiple functions to:
+    + Shuffle the cards.
+    + To make sure the user puts down a valid card.
+    + Identify who is the judge and who are the carders.
+    + Keep track of total cards to know when the game will end.
+    + Keep track of player's cards.
+    + Keep track of wins.
+    + Have judge choose winner of cards presented.
+    + Everyone but judge grabs new card at the end of each judging.
+    + Judge rotates.
+    + Find who won.
+    + Replay button.
+  Progress: Created shuffle function and created abstract Player class, along with Judge and Contestent classes that derive
+            from Player class.
 
 Storage/retrieval of cards (Alec Walter):
   - Create a folder for image (meme) files and a folder for text (phrase) files. This folder will initially contain test images
