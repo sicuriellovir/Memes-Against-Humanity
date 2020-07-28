@@ -1,5 +1,5 @@
 import tkinter as tk
-import GUIhandler as GUI
+from . import GUIhandler as GUI
 
 def createMainMenu(root):
     #creates the frame for the main menu
@@ -15,7 +15,6 @@ def createMainMenu(root):
 
     #runs if the user clicks "Connect to game"
     def connectGameEvent(event):
-        mainFrame.forget()
         GUI.showReadyMenu()
     startButton.bind('<Button-1>', connectGameEvent)
 
