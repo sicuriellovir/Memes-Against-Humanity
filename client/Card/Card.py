@@ -1,5 +1,5 @@
 from PIL import Image
-from pathlib import Path, WindowsPath
+from pathlib import Path
 class Card:
     def __init__(self, fileName):
         self._fileName = fileName
@@ -10,7 +10,7 @@ class Card:
 class MemeCard(Card):
     def __init__(self, fileName):
         super().__init__(fileName)
-        path = Path(__file__).parent / WindowsPath("memes/" + str(fileName))
+        path = Path(__file__).parent / Path("memes/" + str(fileName))
         self._image = Image.open(path)
 
     def getImage(self):
@@ -20,7 +20,7 @@ class PhraseCard(Card):
     def __init__(self, fileName, playerName):
         super().__init__(fileName)
         self._playerName = playerName
-        path = Path(__file__).parent / WindowsPath("phrases/" + str(fileName))
+        path = Path(__file__).parent / Path("phrases/" + str(fileName))
         self._phrase = open(path).read()
 
     def getText(self):

@@ -1,5 +1,4 @@
 import tkinter as tk
-from client import client
 from . import MainMenu as menu
 from . import ReadyGUI as ready
 from . import OptionsGUI as options
