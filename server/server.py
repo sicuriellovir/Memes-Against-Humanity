@@ -9,14 +9,17 @@ server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 server_socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR,1)
 
 server_socket.bind((IP, PORT))
-server_socket.listen()
+server_socket.listen(3)
 
 socket_list = [server_socket]
 
 clients = {}
 
-print(f'Listening for connections on {IP}:{PORT}...')
+def isReady():
+	if count == 3:
+		return True
 
+print(f'Listening for connections on {IP}:{PORT}...')
 def recieve_message(client_socket):
 	try:
 		message_header = client_socket.recv(HEADER_LENGTH)
@@ -26,17 +29,15 @@ def recieve_message(client_socket):
 
 		message_length = int(message_header.decode('utf-8').strip())
 		return {'header': message_header, 'data': client_socket.recv(message_length)}
-
-
 	except:
 		return False
-
+count = 0
 while True:
 	read_sockets, _, exception_sockets = select.select(socket_list, [], socket_list)
-
 	for notified_socket in read_sockets:
 		if notified_socket == server_socket:
 			client_socket, client_address = server_socket.accept()
+			count += 1
 
 			user = recieve_message(client_socket)
 			if user is False:
@@ -60,7 +61,6 @@ while True:
 			user = clients[notified_socket]
 
 			print(f'Received message from {user["data"].decode("utf-8")}: {message["data"].decode("utf-8")}')
-
 			for client_socket in clients:
 				if client_socket != notified_socket:
 					client_socket.send(user['header'] + user['data']+ message['header'] + message['data'])
