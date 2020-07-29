@@ -2,6 +2,7 @@ import tkinter as tk
 from . import GUIhandler as GUI
 from ..Card import PhraseCard, MemeCard
 from time import sleep
+from client.client import *
 
 def createReadyMenu(root):
     #creates the frame for the ready menu
@@ -22,7 +23,7 @@ def createReadyMenu(root):
         readyButton.configure(text="Waiting for players", state="disabled")
         returnButton.configure(state="disabled")
         root.update()
-        #client.Connect(nameTextBox.get())
+        client.Connect(nameTextBox.get())
         #GUI.showWaitingGUI()
         c1 = PhraseCard("TestPhrase5", "Player1")
         c2 = PhraseCard("TestPhrase2", "Player2")
