@@ -1,8 +1,9 @@
 import tkinter as tk
 from . import GUIhandler as GUI
-from ..Card import PhraseCard, MemeCard
+from ..Card import MemeCard
+from .. import client
+from ..Player import Player
 from time import sleep
-from client.client import *
 
 def createReadyMenu(root):
     #creates the frame for the ready menu
@@ -23,14 +24,12 @@ def createReadyMenu(root):
         readyButton.configure(text="Waiting for players", state="disabled")
         returnButton.configure(state="disabled")
         root.update()
-        client.Connect(nameTextBox.get())
-        #GUI.showWaitingGUI()
-        c1 = PhraseCard("TestPhrase5", "Player1")
-        c2 = PhraseCard("TestPhrase2", "Player2")
-        c3 = PhraseCard("TestPhrase26", "Player3")
-        m1 = MemeCard("test.png")
-        sleep(5)
-        GUI.showPlayerGUI([c1, c2, c3], m1)
+        name = nameTextBox.get()
+        name = name.replace(" ", "")
+        client.Connect(name)
+        while not client.checkIfReadyToStart():
+            sleep(1)
+        GUI.showPlayerGUI(name)
     readyButton.bind('<Button-1>', readyEvent)
 
     #returns to the main menu if the user clicks the return button
