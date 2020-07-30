@@ -28,7 +28,7 @@ while True:
 	clients.append(client)
 	print(f'Username: {username}')
 	mRandom = random.randint(1,7)
-	meme = f"testMeme{str(mRandom)}"
+	meme = f"TestMeme{str(mRandom)}"
 	client.send(f'{meme}'.encode(('utf-8')))
 	pRandom = random.randint(1,31)
 	phrases = f"TestPhrase{str(pRandom)}"
