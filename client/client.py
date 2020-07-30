@@ -10,7 +10,7 @@ HEADER_LENGTH = 10
 def Connect(my_username):
 	global client_socket
 
-	IP = "127.0.0.1"
+	IP = "13.82.145.7"
 	PORT = 1234
 
 	client_socket.connect((IP,PORT))
