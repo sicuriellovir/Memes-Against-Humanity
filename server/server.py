@@ -19,7 +19,7 @@ def isReady():
 		return True
 
 def sendMeme(client_socket):
-	folder = r"/Users/virginiasicuriello/Desktop/mm/client/Card/memes"
+	folder = r"Memes-Against-Humanity/client/Card/memes"
 	a = random.choice(os.listdir(folder))
 	file = folder +'/'+a
 	file = file.encode()
