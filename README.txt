@@ -23,10 +23,14 @@ consistantly over the course of development.
 - Pickle
 - PyGame
 - Tkinter
+- Time
 
 *A list of other resources.
+- The meme images were gathered from https://www.pngegg.com/
+- Some phrases were copied from the original cards against humanity game, some were written by the project members.
 
 *Descriptions of any extra features implemented (beyond the project proposal).
+- There were no features implemented beyond the proposal.
 
 *Include a description of the separation of work (who was responsible for what pieces of the program).
   This group project was divided in 4 categories, one for each teammate however, half of the group abandoned the project therefore:
