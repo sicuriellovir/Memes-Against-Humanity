@@ -9,8 +9,9 @@ client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 HEADER_LENGTH = 10
 def Connect(my_username):
 	global client_socket
-
-	IP = "13.82.145.7"
+	
+	#The IP for the Azure server is 13.82.145.7, replace the below IP if you want to connect to it (server may not be running)
+	IP = "127.0.0.1"
 	PORT = 1234
 
 	client_socket.connect((IP,PORT))
